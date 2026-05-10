@@ -493,7 +493,19 @@ function QuoteForm() {
     // In production, this sends to backend / webhook
     setSubmitted(true);
     // Also open WhatsApp with pre-filled message
-    const msg = encodeURIComponent(`Bonjour TAF TAF WORLD ! 📦\n\nJe souhaite un devis :\n👤 ${form.name}\n📞 ${form.phone}\n📍 De : ${form.from}\n📍 Vers : ${form.to}\n📦 Type : ${form.type || "Non précisé"}\n⚖️ Poids : ${form.weight || "Non précisé"}\n📝 ${form.description || "Aucune description"}`);
+    const msg = encodeURIComponent(
+      "Bonjour TAF TAF WORLD !\n\n" +
+      "Je souhaite un devis :\n\n" +
+      "Nom : " + form.name + "\n" +
+      "Tel : " + form.phone + "\n" +
+      "Email : " + (form.email || "Non renseigne") + "\n" +
+      "Depart : " + form.from + "\n" +
+      "Destination : " + form.to + "\n" +
+      "Type : " + (form.type || "Non precise") + "\n" +
+      "Poids : " + (form.weight || "Non precise") + "\n" +
+      "Description : " + (form.description || "Aucune") + "\n\n" +
+      "Merci de me recontacter rapidement."
+    );
     setTimeout(() => window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, "_blank"), 1500);
   };
 
