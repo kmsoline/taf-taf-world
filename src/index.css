@@ -1,0 +1,64 @@
+/* ═══════════════════════════════════════
+   TAF TAF WORLD — Global Styles
+   ═══════════════════════════════════════ */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ffffff;
+  color: #111111;
+  overflow-x: hidden;
+}
+
+/* Mobile-first: optimize touch targets */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input, select, textarea {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #12B8F5;
+  border-radius: 3px;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(18, 184, 245, 0.2);
+  color: #111111;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid #12B8F5;
+  outline-offset: 2px;
+}
+
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
